@@ -52,11 +52,12 @@
     <script src='../static/js/app.js'></script>
     
     <script>
-        var lrmap = L.map('map').setView([15.5994, -28.6731], 3);
+        var lrmap = L.map('map').setView([15.5994, -28.6731], 2);
         L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2hhbWVldGhhIiwiYSI6ImNqbjExdjczaTI1Y3czcG5vaDVvZHVqcnYifQ.XgXeLUf_4pa8v6UmZDo_Iw')
         .addTo(lrmap);
 
-    d3.json("data_for_plugin_2017.json", function(response) {
+    // d3.json("data_for_plugin_2017.json", function(response) {
+    d3.json("test.json", function(response) {
       // console.log(response);
       var data = response;
    
