@@ -13,6 +13,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 from pprint import pprint
 from operator import itemgetter
+import json
 app = Flask(__name__)
 
 
@@ -40,9 +41,13 @@ def index():
 
 @app.route("/maps")
 def maps():
-    # print()
-    return data_for_plugin_2015.json
+	with open('.static/data/test.json', 'r') as f:
+		data_string = f.read()
+		data = json.loads(data_string)
+		print(data)   
+		return render_template("index.html", data=jsonify(data))
 
 
 if __name__ == "__main__":
-    app.run()
+
+    app.run(debug=True)

@@ -1,7 +1,7 @@
 // function buildPlot() {
 //     /* data route */
 //   var url = "/api/maps";
-//   d3.json(url).then(function(response) {
+//   d3.json({{data}}, function(response) {
   	
 //     console.log(response);
 
