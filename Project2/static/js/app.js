@@ -3,8 +3,9 @@ function buildMap() {
   var lrmap = L.map('map').setView([15.5994, -28.6731], 2);
   L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2hhbWVldGhhIiwiYSI6ImNqbjExdjczaTI1Y3czcG5vaDVvZHVqcnYifQ.XgXeLUf_4pa8v6UmZDo_Iw')
   .addTo(lrmap);
-  var url = "/api/maps";
-  d3.json(url, function(response) {
+  // var url = "/maps";
+  // console.log( '{{ data }}' )
+  d3.json("../static/data/top_100.json", function(response) {
     var data = response;
     console.log(data);
     var migrationLayer = new L.migrationLayer({

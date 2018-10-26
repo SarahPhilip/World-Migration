@@ -1,31 +1,5 @@
-// function buildPlot() {
-//     /* data route */
-//   var url = "/api/maps";
-//   d3.json({{data}}, function(response) {
-  	
-//     console.log(response);
-
-//     var data = [response];
-
-//     var layout = {
-//       title: "Pet Pals",
-//       xaxis: {
-//         title: "Pet Type"
-//       },
-//       yaxis: {
-//         title: "Number of Pals"
-//       }
-//     };
-
-//     Plotly.newPlot("plot", data, layout);
-//   });
-// }
-
-// buildPlot();
-
 function buildCharts() {
-	var url = "/api/charts";
-    d3.json(url).then(function (data) {
+    d3.json("../static/data/top_10.json").then(function (data) {
 
             var migrants = data.map(d => d.migrants);
             var countries = data.map(d => d.labels1);
