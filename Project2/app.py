@@ -41,11 +41,19 @@ def index():
 
 @app.route("/maps")
 def maps():
-	with open('.static/data/test.json', 'r') as f:
+	with open('static/data/top_100.json', 'r') as f:
 		data_string = f.read()
 		data = json.loads(data_string)
 		print(data)   
 		return render_template("index.html", data=jsonify(data))
+
+@app.route("/charts")
+def charts():
+	with open('static/data/top_10.json', 'r') as f:
+		data_string = f.read()
+		data = json.loads(data_string)
+		print(data)   
+		return render_template("charts.html", data=jsonify(data))
 
 
 if __name__ == "__main__":
