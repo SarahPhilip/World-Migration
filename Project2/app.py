@@ -53,8 +53,8 @@ def charts():
 		data_string = f.read()
 		data = json.loads(data_string)
 		print(data)   
-		return render_template("charts.html", data=jsonify(data))
-
+		return render_template("charts.html")
+# , data=jsonify(data)
 
 if __name__ == "__main__":
 

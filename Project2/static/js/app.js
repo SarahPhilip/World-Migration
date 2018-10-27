@@ -1,6 +1,10 @@
 
 function buildMap() {
-  var lrmap = L.map('map').setView([15.5994, -28.6731], 2);
+  // var lrmap = L.map('map').setView([35.5994, -38.6731], 2.8);
+  var lrmap = L.map('map', {
+    center: [23,28],
+    zoom: 3
+});
   L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.dark/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic2hhbWVldGhhIiwiYSI6ImNqbjExdjczaTI1Y3czcG5vaDVvZHVqcnYifQ.XgXeLUf_4pa8v6UmZDo_Iw')
   .addTo(lrmap);
   // var url = "/maps";
@@ -43,7 +47,7 @@ function buildMap() {
 
           for (var i = 0; i < limits.length; i++) {
         div.innerHTML +=
-            '<i style="background:' + getColor(limits[i] + 1) + '"></i> ' +
+            '<i style="background:' + getColor(limits[i] + 1) + '"></i> ' + '   ' +
             limits[i] + (limits[i + 1] ? '&ndash;' + limits[i + 1] + '<br>' : '+');
     }
 

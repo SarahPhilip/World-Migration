@@ -13,12 +13,63 @@
  html,body{
  	margin: 0;
  	padding: 0;
+ 	height: 100%;
  }
- #map{
+ 
+ .box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.box .row.header {
+  flex: 0 1 auto;
+}
+/*.box .row.navbar {
+  flex: 0 1 auto;
+  font-family: Arial, Helvetica, sans-serif !important;
+  /* The above is shorthand for:
+  flex-grow: 0,
+  flex-shrink: 1,
+  flex-basis: auto
+  
+}*/
+
+.box .row.content {
+  flex: 1 1 auto;
+}
+
+.row {
+  display: flex; /* equal height of the children */
+}
+
+.col-container {
+    display: flex;
+    width: 100%;
+}
+.col {
+    flex: 1;
+    padding: 16px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* or simply "1fr 1fr;" */
+  grid-row-gap: 10px; 
+  grid-column-gap: 10px;
+  width: 100%;
+}
+
+.grid-item {
+  background-color: #f8f8f8;
+  /*box-shadow: 0 0 3px #666;*/
+  text-align: center;
+}
+
+ /*#map{
  	position: absolute;
  	height: 100%;
  	width: 100%;
- }
+ }*/
  #event{
  	position: absolute;
  	top: 50px;
@@ -33,12 +84,12 @@
  	background-color:white;
  }
  .legend {
- 	line-height: 18px;
+ 	line-height: 20px;
  	color: #555;
  	background-color:white;
- 	opacity: 0.7;
+ 	/*opacity: 0.7;*/
  	border-radius: 5px; 
- 	line-height: 18px;
+ 	padding: 10px;
  }
 
  .legend i {
@@ -46,19 +97,28 @@
     height: 18px;
     float: left;
     margin-right: 8px;
-    opacity: 0.9;
+    /*opacity: 0.9;*/
 
 }
 
 .info { 
-	padding: 6px 8px; 
+	padding: 6px 8px !important; 
 	/*font: 14px/16px Arial, Helvetica, sans-serif; */
 	background: white; 
-	background: rgba(255,255,255,0.8); 
+	/*background: rgba(255,255,255,0.8); */
 	box-shadow: 0 0 15px rgba(0,0,0,0.2); 
 	border-radius: 5px; 
 } 
 
 
+
+h1 {
+	text-align: center;
+	margin: auto;
+}
+
+.nav-item .nav-link {
+	font-size: x-large;
+}
 
  
